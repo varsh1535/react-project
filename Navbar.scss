@@ -1,0 +1,243 @@
+/* Colors and styling */
+/* Reset some default styling */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root {
+    --blue: #0573a5;
+}
+
+* {
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
+*::selection {
+    background: #0573a5;
+    ;
+    color: rgb(14, 14, 14);
+}
+
+html {
+    font-size: 50%;
+    overflow-x: hidden;
+    scroll-padding-top: 10rem;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2 rem 9%;
+}
+
+header .logo {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #0d0d0d;
+    text-transform: uppercase;
+}
+
+header .logo span {
+    color: var(--blue);
+}
+
+header .navbar a {
+    color: #0a0909;
+    font-size: 3rem;
+    margin: 0.8rem;
+}
+
+header .navbar a:hover {
+    color: var(--blue);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(13, 13, 13);
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a:hover {
+    color: rgb(4, 100, 159);
+    border-bottom: 2px solid rgb(3, 82, 143);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 40px; /* Set the desired width */
+    height: 40px; /* Set the desired height */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the container */
+    margin-right: 10px; /* Add some space between the image and the text */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #665f5f;
+   
+}
+
+/* Header Styles */
+header {
+    background-color: #eee8e8;
+    color: rgb(0, 0, 0);
+    padding: 10px ;
+}
+
+header nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Service Section */
+#services {
+    background-color: #f8eade;
+    padding: 50px 20px;
+    text-align: center;
+    justify-content:space-around;
+}
+
+#services h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.service-item {
+    background-color: #c9eaf8;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.service-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-button {
+    background-color: #ffffff;
+    color: #0d0d0d;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.profile-button:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content a img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.profile-menu:hover .dropdown-content {
+    display: block;
+}

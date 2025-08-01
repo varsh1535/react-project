@@ -1,0 +1,669 @@
+.navBarSection {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+  
+.logoDiv {
+    display: flex;
+    align-items: center;
+  }
+  
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+  }
+  
+.logo .icon {
+    margin-right: 10px;
+  }
+  
+.navBar {
+    display: flex;
+    align-items: center;
+  }
+  
+.navlists {
+    display: flex;
+    list-style: none;
+  }
+  
+.navItem {
+    margin: 0 20px;
+  }
+  
+  .navlink {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .navlink:hover {
+    color: #007bff;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .closeNavbar {
+    display: none;
+  }
+  
+  .toggleNavbar {
+    display: none;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navBar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+  
+    .navlists {
+      flex-direction: column;
+    }
+  
+    .navItem {
+      margin: 20px 0;
+    }
+  
+    .toggleNavbar {
+      display: block;
+      cursor: pointer;
+    }
+  
+    .toggleNavbar .icon {
+      font-size: 24px;
+    }
+  
+    .closeNavbar {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  
+    .closeNavbar .icon {
+      font-size: 24px;
+    }
+  
+    .navBar.show {
+      transform: translateX(0);
+    }
+  }
+  .home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .homeContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .textDiv .smallText {
+    display: block;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 10px;
+  }
+  
+  .textDiv .homeTitle {
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+.searchBox {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.8); /* Light box background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+.searchInput, .dateInput, .priceInput {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+.searchInput {
+    width: 200px;
+  }
+
+.dateInput {
+    width: 150px;
+  }
+
+.priceInput {
+    width: 150px;
+  }
+
+.priceValue {
+    color: #333;
+    font-size: 16px;
+  }
+
+  .main {
+    padding: 50px 0;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .secContent {
+    display: flex;  /* Use flexbox for layout */
+    flex-wrap: wrap;  /* Allow items to wrap to the next line if necessary */
+    justify-content: space-between;  /* Distribute space between the items */
+    gap: 20px;  /* Add gap between items */
+  }
+  
+  .destinationCard {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    flex: 1 0 21%;  /* Adjust the flex-basis to control the width of the cards (approximately 4 cards per row with gaps) */
+    margin: 10px;  /* Add margin for spacing between cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center align items */
+    text-align: center;
+  }
+  
+  .destinationCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .destinationImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .destinationInfo {
+    padding: 20px;
+  }
+  
+  .destTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    display: block;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .grade {
+    display: block;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #555;
+  }
+
+
+.service {
+    padding: 50px 0;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+.secContent {
+    display: flex;  /* Change from grid to flex */
+    justify-content: space-around;  /* Distribute space around the items */
+    flex-wrap: wrap;  /* Allow items to wrap to the next line if necessary */
+  }
+  
+.serviceCard {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    flex: 0 1 30%;  /* Adjust the flex-basis to control the width of the cards */
+    margin: 10px;  /* Add margin for spacing between cards */
+}
+  
+  .serviceCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .serviceIcon {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 15px;
+  }
+  
+.serviceTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+  .serviceDescription {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.about {
+    padding: 50px 0;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .aboutContent {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000000;
+  }
+  
+  .aboutContent p {
+    margin-bottom: 20px;
+  }
+
+
+
+  .contact {
+    padding: 50px 0;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .contactContent {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submitButton {
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #0056b3;
+  }
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .socialMediaIcons {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.socialMediaIcons .icon {
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+.socialMediaIcons .icon:hover {
+    color: #007bff;
+}
+
+.footerText {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+
+
+
+  .booknow {
+    padding: 50px 0;
+  }
+  
+  .secTitle {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .booknowContent {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .paymentSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .selectedPackages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .selectedPackageCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .selectedPackageImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .selectedPackageInfo {
+    padding: 10px;
+  }
+  
+  .amountInput {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .paymentButton {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .paymentButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .cancelButton {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancelButton:hover {
+    background-color: #c82333;
+  }
+  
+  .bookNowButton {
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .bookNowButton a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .bookNowButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .destinationCard {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Add cursor pointer for clickable cards */
+  }
+  
+  .destinationCard.selected {
+    border: 2px solid #007bff; /* Highlight selected cards */
+  }
+  
+  .destinationCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  .destinationImg {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .destinationInfo {
+    padding: 20px;
+  }
+  
+  .destTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .location {
+    display: block;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 5px;
+  }
+  
+  .grade {
+    display: block;
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .amount {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+  }
